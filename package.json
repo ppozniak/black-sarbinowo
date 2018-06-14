@@ -4,7 +4,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "gh-pages": "git subtree push --prefix dist origin gh-pages"
+    "deploy": "gulp && gh-pages -d dist"
   },
   "devDependencies": {
     "babel-core": "^6.4.0",
@@ -47,6 +47,7 @@
     }
   },
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "hamburgers": "^0.9.3",
     "siema": "^1.5.1",
     "smooth-scroll": "^12.1.5",
