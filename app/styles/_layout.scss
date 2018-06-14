@@ -49,15 +49,7 @@ body {
   @include from-landscape {
     display: block;
     justify-content: center;
-    border-bottom: 1px solid rgba($black, .14); // &:after {
-    //   content: "";
-    //   width: 100%;
-    //   display: block;
-    //   border: 0;
-    //   height: 1px;
-    //   background-image: linear-gradient(to right, rgba($black, 0), rgba($black, 0.4), rgba($black, 0));
-    //   margin-top: Rem(15px);
-    // }
+    border-bottom: 1px solid rgba($black, .14);
   }
 }
 
@@ -154,6 +146,7 @@ $hamburger-hover-transition-timing-function: ease-out;
   }
   @include from-landscape {
     font-size: 1rem;
+    background-color: transparent;
   }
   &:focus,
   &:hover,

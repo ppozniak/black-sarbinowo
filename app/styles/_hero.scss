@@ -6,29 +6,25 @@
   color: #fff;
   box-sizing: border-box;
   text-align: center;
-
   @include from-portrait {
     min-height: 100vh;
     padding-top: $vflow * 4;
   }
-
   @include from-landscape {
     background-image: linear-gradient(to bottom, rgba($black, .4), rgba($black, .6)), url(../images/hero--desktop.jpg);
   }
 }
 
 .hero__title {
-  font-size: 3.6rem;
+  font-family: 'Bilbo Swash Caps', cursive;
+  font-size: 5rem;
   font-weight: normal;
   line-height: 1.3;
   text-shadow: 3px 3px 3px rgba($black, .8);
-  @include from-landscape {
-    font-size: 4rem;
-  }
 }
 
 .features {
-  flex-grow: 1; 
+  flex-grow: 1;
   padding: $vflow;
   @include from-landscape {}
 }
