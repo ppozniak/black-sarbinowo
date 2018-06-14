@@ -1,0 +1,218 @@
+$headerSize: Rem(65px);
+$navWidth: Rem(200px);
+body {
+  padding-top: $headerSize;
+  @include from-landscape {
+    padding-top: 0;
+    display: flex;
+    justify-content: flex-end
+  }
+}
+
+.site-header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  align-items: center;
+  height: $headerSize;
+  background-color: #fff;
+  z-index: 2;
+  box-shadow: 0 1px 20px 4px rgba($black, .14);
+  @include from-landscape {
+    left: 0;
+    width: $navWidth;
+    background: none;
+    box-shadow: none;
+    border: none;
+    z-index: 2;
+    height: auto;
+  }
+}
+
+.site-header {
+  .container,
+  .site-header__body,
+  a,
+  h1,
+    {
+    height: 100%;
+  }
+}
+
+.site-header__body {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: Rem(9px) 0;
+  @include from-landscape {
+    display: block;
+    justify-content: center;
+    border-bottom: 1px solid rgba($black, .14); // &:after {
+    //   content: "";
+    //   width: 100%;
+    //   display: block;
+    //   border: 0;
+    //   height: 1px;
+    //   background-image: linear-gradient(to right, rgba($black, 0), rgba($black, 0.4), rgba($black, 0));
+    //   margin-top: Rem(15px);
+    // }
+  }
+}
+
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: Rem(34px);
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 7px;
+$hamburger-layer-color: $black;
+$hamburger-layer-border-radius: Rem(1px);
+$hamburger-hover-opacity: 1;
+$hamburger-hover-transition-duration: 0.15s;
+$hamburger-hover-transition-timing-function: ease-out;
+.site-nav-toggle {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+  @include from-landscape {
+    display: none;
+  }
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-right: auto;
+}
+
+.site-logo__image {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-height: Rem(65px);
+  @include from-landscape {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.site-nav {
+  position: fixed;
+  top: $headerSize;
+  left: 0;
+  width: 80%;
+  background-color: $navgray;
+  transform: translateX(-100%);
+  bottom: 0;
+  transition: transform .3s ease-out;
+  overflow-y: auto;
+  @include from-landscape {
+    top: 0;
+    transform: none;
+    width: $navWidth;
+    z-index: 1;
+    padding-top: $headerSize * 1.75;
+    box-shadow: 0 1px 15px 1px rgba(#000, .3);
+    background: linear-gradient(to bottom, #fff Rem(100px), $navgray);
+  }
+  @include to-landscape {
+    .container {
+      width: 100%;
+    }
+  }
+}
+
+.site-nav__list {
+  @extend %list-reset;
+}
+
+.site-nav__link {
+  display: block;
+  color: $font-color;
+  font-size: Rem(20px);
+  font-weight: bold;
+  text-decoration: none;
+  padding: $vflow / 2 0 0;
+  padding-left: $vflow / 2;
+  background-color: #fff;
+  border-left: 0px solid $navgray;
+  transition: all .15s ease-out;
+  &:after {
+    content: "";
+    display: block;
+    width: 80%;
+    margin: $vflow / 2 0 0 $vflow / 8;
+    border-bottom: 1px solid rgba($black, .1);
+  }
+  @include from-landscape {
+    font-size: 1rem;
+  }
+  &:focus,
+  &:hover,
+  .active {
+    border-left-width: 1.2rem;
+  }
+}
+
+.pusher-wrapper {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.pusher {
+  position: relative;
+  height: 100%;
+  transition: transform .3s ease-out;
+  @include from-landscape {
+    padding-left: $navWidth;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: .25s ease-in-out;
+  transition-property: opacity, visibility;
+  background-color: $black;
+  z-index: 10;
+  @include from-landscape {
+    display: none;
+  }
+}
+
+.site-nav--open {
+  @include to-landscape {
+    overflow: hidden;
+    .site-nav {
+      opacity: 1;
+      transform: translateX(0);
+      box-shadow: 0 1px 15px 1px rgba(#000, .3);
+      z-index: 1;
+    }
+    .pusher {
+      transform: translateX(80%);
+    }
+    .overlay {
+      visibility: visible;
+      opacity: .7;
+    }
+  }
+}
+
+body.baguetteBox-open {
+  overflow: hidden;
+}

@@ -1,0 +1,81 @@
+.section.hero {
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+  background: linear-gradient(to bottom, rgba($black, .4), rgba($black, .6)), url(../images/hero--mobile.jpg) no-repeat top center/cover fixed;
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+
+  @include from-portrait {
+    min-height: 100vh;
+    padding-top: $vflow * 4;
+  }
+
+  @include from-landscape {
+    background-image: linear-gradient(to bottom, rgba($black, .4), rgba($black, .6)), url(../images/hero--desktop.jpg);
+  }
+}
+
+.hero__title {
+  font-size: 3.6rem;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 3px 3px 3px rgba($black, .8);
+  @include from-landscape {
+    font-size: 4rem;
+  }
+}
+
+.features {
+  flex-grow: 1; 
+  padding: $vflow;
+  @include from-landscape {}
+}
+
+.features__list {
+  @extend %list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: .95;
+  padding: 0 .1rem 1.5rem;
+  flex: 1 33.333%;
+}
+
+.feature__circle {
+  $icon-size: Rem(75px);
+  display: flex;
+  width: $icon-size;
+  height: $icon-size;
+  border: 2px solid $black;
+  padding: $icon-size*3.141592653589793/100*5;
+  border-radius: 50%;
+  margin-bottom: Rem(8px);
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(#fff, .85);
+}
+
+.feature__icon {
+  width: 100%;
+  height: 100%;
+}
+
+.feature__label {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: Rem(15px);
+}
+
+.hero-cta {
+  margin-top: $vflow;
+}

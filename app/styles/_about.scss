@@ -1,0 +1,16 @@
+.section.about {
+  background-color: $navgray;
+  @include from-landscape {
+    text-align: center;
+  }
+
+  p {
+    font-size: Rem(17px);
+    @include from-landscape {
+      max-width: Rem(600px);
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+  }
+}
