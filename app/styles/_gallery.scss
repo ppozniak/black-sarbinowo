@@ -1,0 +1,44 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery__link {
+  flex: 1 1 50%;
+  transition: all .3s ease-out;
+  height: Rem(175px);
+  border: $vflow / 8 solid transparent;
+  &:hover,
+  &:focus {
+    border-width: 0;
+    font-size: 1rem;
+  }
+  @include from-portrait {
+    flex-basis: 25%;
+    max-width: 50%;
+  } // IE11 hackz
+  @media screen and (-ms-high-contrast:active),
+  (-ms-high-contrast:none) {
+    max-width: 25%;
+  }
+}
+
+.gallery__more {
+  $more: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $more;
+  color: darken($more, 25%);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .9rem;
+  background-clip: content-box;
+}
+
+.gallery__thumbnail {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

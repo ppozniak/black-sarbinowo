@@ -1,5 +1,3 @@
-// bower:scss
-// endbower
 @import 'globals/_variables';
 @import 'globals/_mixins';
 @import 'globals/_helpers';
@@ -9,6 +7,7 @@
 @import '_about';
 @import '_houses';
 @import '_pricing';
+@import '_gallery';
 @import '_contact';
 @import 'node_modules/hamburgers/_sass/hamburgers/hamburgers';
 html {
