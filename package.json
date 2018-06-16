@@ -11,7 +11,9 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-register": "^6.5.2",
     "browser-sync": "latest",
+    "critical": "^1.3.3",
     "del": "latest",
+    "gh-pages": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-babel": "latest",
@@ -31,8 +33,7 @@
     "gulp-useref": "latest",
     "main-bower-files": "latest",
     "run-sequence": "latest",
-    "wiredep": "latest",
-    "gh-pages": "latest"
+    "wiredep": "latest"
   },
   "eslintConfig": {
     "env": {

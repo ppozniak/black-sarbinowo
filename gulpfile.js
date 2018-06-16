@@ -5,6 +5,7 @@ const browserSync = require('browser-sync').create();
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
+const critical = require('critical');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -166,6 +167,15 @@ gulp.task('wiredep', () => {
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+  critical.generate({
+    inline: true,
+    base: 'dist/',
+    src: 'index.html',
+    dest: 'index.html',
+    minify: true,
+    width: 1400,
+    height: 900
+  });
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
