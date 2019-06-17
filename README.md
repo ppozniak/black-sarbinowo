@@ -1,18 +1,17 @@
 # Domki Black Sarbinowo
 Start
 ```
-yarn
-bower i
+npm i
 ```
 Development
 ```
-gulp serve
+npm start
 ```
 Deploying to gh pages
 ```
-gulp build
-gulp serve:dist
-// Before deploying be sure that build was succesful and everything looks fine!
+npm run build
+npm run serve:dist
+// Before deploying be sure that build was successful and everything looks fine!
 npm run deploy
 ```
 

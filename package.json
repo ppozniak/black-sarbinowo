@@ -4,36 +4,37 @@
     "node": ">=4"
   },
   "scripts": {
+    "start": "gulp serve",
+    "start:dist": "gulp serve:dist",
+    "build": "gulp build",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
-    "babel-core": "^6.4.0",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-register": "^6.5.2",
-    "browser-sync": "latest",
-    "critical": "^1.3.3",
-    "del": "latest",
-    "gh-pages": "latest",
-    "gulp": "latest",
-    "gulp-autoprefixer": "latest",
-    "gulp-babel": "latest",
-    "gulp-cache": "latest",
-    "gulp-cssnano": "latest",
-    "gulp-eslint": "latest",
-    "gulp-filter": "latest",
-    "gulp-htmlmin": "latest",
-    "gulp-if": "latest",
-    "gulp-imagemin": "latest",
-    "gulp-load-plugins": "latest",
-    "gulp-plumber": "latest",
-    "gulp-sass": "latest",
-    "gulp-size": "latest",
-    "gulp-sourcemaps": "latest",
-    "gulp-uglify": "latest",
-    "gulp-useref": "latest",
-    "main-bower-files": "latest",
-    "run-sequence": "latest",
-    "wiredep": "latest"
+    "babel-core": "6.26.3",
+    "babel-preset-es2015": "6.24.1",
+    "babel-register": "6.26.0",
+    "browser-sync": "2.26.7",
+    "critical": "1.3.4",
+    "del": "4.1.1",
+    "gh-pages": "2.0.1",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "5.0.0",
+    "gulp-babel": "7.0.1",
+    "gulp-cache": "1.1.2",
+    "gulp-cssnano": "2.1.3",
+    "gulp-eslint": "5.0.0",
+    "gulp-filter": "6.0.0",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-if": "2.0.2",
+    "gulp-imagemin": "4.1.0",
+    "gulp-load-plugins": "1.6.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-sass": "4.0.2",
+    "gulp-size": "3.0.0",
+    "gulp-sourcemaps": "2.6.5",
+    "gulp-uglify": "3.0.2",
+    "gulp-useref": "3.1.6",
+    "run-sequence": "2.2.1"
   },
   "eslintConfig": {
     "env": {
@@ -49,7 +50,7 @@
     }
   },
   "dependencies": {
-    "hamburgers": "^0.9.3",
-    "smooth-scroll": "^12.1.5"
+    "hamburgers": "0.9.3",
+    "smooth-scroll": "16.1.0"
   }
 }
