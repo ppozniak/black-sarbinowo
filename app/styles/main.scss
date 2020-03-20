@@ -1,15 +1,15 @@
-@import 'globals/_variables';
-@import 'globals/_mixins';
-@import 'globals/_helpers';
-@import 'globals/_atoms';
-@import '_layout';
-@import '_hero';
-@import '_about';
-@import '_houses';
-@import '_pricing';
-@import '_gallery';
-@import '_contact';
-@import 'node_modules/hamburgers/_sass/hamburgers/hamburgers';
+@import "globals/_variables";
+@import "globals/_mixins";
+@import "globals/_helpers";
+@import "globals/_atoms";
+@import "_layout";
+@import "_hero";
+@import "_about";
+@import "_houses";
+@import "_pricing";
+@import "_gallery";
+@import "_contact";
+@import "node_modules/hamburgers/_sass/hamburgers/hamburgers";
 html {
   @include fluid-type(font-size, Em(320px), Em(1600px), Rem(15px), Rem(19px));
 }
@@ -33,7 +33,7 @@ h4 {
 
 h3 {
   font-size: 2.45rem;
-  font-weight: normal;
+  font-weight: bold;
   text-align: center;
 }
 
